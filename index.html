@@ -7,46 +7,61 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="Login_container">
-        <h1>Login</h1>
+    <div class="main__container">
+      <div class="login__container">
         <form class="login_form">
-          <input type="text" placeholder="Write your ID" required />
+          <h1>Please Login to enter your TODO</h1>
+          <input
+            type="text"
+            placeholder="Write your ID"
+            id="id"
+            required
+            class="input"
+          />
           <input
             type="password"
             placeholder="Write your PW"
-            required
-            maxlength="5"
+            id="pw"
+            class="input"
           />
-          <button>로그인</button>
+          <button type="submit" class="input">로그인</button>
         </form>
-      </div>
-      <h1 id="login_id" class="hidden">d</h1>
-
-      <div class="clock_container">
         <div>
-          <h1>Today`s Time</h1>
-          <h1 id="clock"></h1>
+          <h1 id="login__success"></h1>
+          <form id="todo_form" class="hidden">
+            <input
+              type="text"
+              placeholder="Write your todo"
+              required
+              class="input"
+            />
+          </form>
+          <ul id="todo_list"></ul>
         </div>
       </div>
     </div>
-    <div class="container2">
-      <div>
-        <form id="todo_form">
-          <input type="text" placeholder="Write your todo" required />
-        </form>
-        <ul id="todo_list"></ul>
-      </div>
-      <div id="weather">
+
+    <div>
+      <div id="weather" class="weather">
         <span></span>
         <span></span>
       </div>
     </div>
+    <!-- </div> -->
+
+    <div class="clock">
+      <h1>Today`s Time</h1>
+      <h1 id="clock"></h1>
+    </div>
+
+    <!-- <div class="container2">
+
+    </div> -->
   </body>
 
   <script src="h-clock.js"></script>
   <script src="h-background.js"></script>
-  <script src="login.js"></script>
+  <script src="h-login.js"></script>
   <script src="h-weather.js"></script>
   <script src="h-todo.js"></script>
 </html>

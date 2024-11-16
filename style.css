@@ -1,51 +1,90 @@
+/* 모든 마진과 패딩을 0으로 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: tomato;
   font-family: "Times New Roman", Times, serif;
   font-weight: 900;
   padding: 20px;
-}
-.container {
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-.clock_container {
+.main__container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-}
-.Login_container {
-  text-align: center;
-}
-
-.form_container {
-  background-color: red;
-  width: 400px;
-  height: auto;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  width: 50%;
+  height: 50%;
+  border-radius: 40px;
+  border: 10px solid white;
+  position: relative;
 }
 
 .login_form {
+  height: auto;
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  gap: 20px;
-  background-color: antiquewhite;
+  width: 100%;
 }
 
 .hidden {
   display: none;
 }
 
-.container2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
-}
-#todo_list {
-  border: 1px solid black;
-  border-radius: 10px;
+.input {
+  height: 40px;
+  background-color: whitesmoke;
   padding: 10px;
-  text-decoration: none;
-  list-style-type: none;
+  border: 2px solid wheat;
+  border-radius: 8px;
+  width: 460px;
+}
+
+.weather {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  background: repeating-linear-gradient(90deg, wheat, white);
+  padding: 10px;
+  opacity: 90%;
+  border-radius: 30px;
+}
+
+.clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 8px;
+  margin-left: 20px;
+  background: repeating-linear-gradient(130deg, wheat, white);
+  padding: 10px;
+  opacity: 90%;
+  border-radius: 30px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  list-style: none;
+  width: 465px;
+}
+
+.delete__btn {
+  margin-left: 3px;
 }
